@@ -38,3 +38,131 @@ INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/ment
 INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:48:06] "[33mGET /api/test HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:48:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.238:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:52:21] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:52:21] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:53:44] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:53:44] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:53:44] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 17:58:10] "[33mGET /api/test HTTP/1.1[0m" 404 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.238:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.238:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:00:32] "GET /api/test HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:05:59] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:05:59] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:05:59] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.238:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:24] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:24] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:28] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:28] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:30] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:30] "[33mGET /api/... HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:31] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:09:31] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:13] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:13] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:14] "GET /api/clinician/67890 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:14] "GET /api/clinician/67890 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:16] "GET /api/admin/11111 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:16] "GET /api/admin/11111 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:18] "GET /api/clinician/67890 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:18] "GET /api/clinician/67890 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:19] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jul/2024 18:11:19] "GET /api/patient/12345 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 111-114-797
+INFO:werkzeug: * Detected change in '/Users/georgesmacbook/mental_health_ai/mental_health_ai/src/main.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.1.238:8000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat

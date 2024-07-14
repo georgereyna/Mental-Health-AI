@@ -1,10 +1,9 @@
-# run, start new terminal, cd frontend, npm start
-
 import sys
 import os
 import asyncio
 from datetime import datetime, timedelta
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 from typing import Dict, Any
 
 # Add the project root directory to Python path
@@ -37,6 +36,7 @@ from modules.performance_metrics_module import PerformanceMetricsModule
 from modules.challenges_module import ChallengesModule
 
 app = Flask(__name__)
+CORS(app)
 event_bus = EventBus()
 
 async def setup_modules(event_bus):
@@ -80,20 +80,58 @@ async def setup_modules(event_bus):
 
 modules = asyncio.run(setup_modules(event_bus))
 
+@app.route('/api/test')
+def test_route():
+    return jsonify({"message": "Test route is working"})
+
 @app.route('/api/patient/<id>')
 def patient_interface(id):
-    data = asyncio.run(modules['user_interface'].get_patient_interface(id))
-    return jsonify(data)
+    print(f"Received request for patient {id}")
+    try:
+        # This is a mock response. Replace this with actual data retrieval logic.
+        data = {
+            "props": {
+                "patientId": id,
+                "appointments": [
+                    {"date": "2023-07-20", "time": "10:00 AM"},
+                    {"date": "2023-07-27", "time": "2:00 PM"}
+                ],
+                "symptoms": [
+                    {"name": "Headache", "severity": 3},
+                    {"name": "Fatigue", "severity": 2}
+                ],
+                "treatmentPlan": {
+                    "description": "Rest and hydration"
+                }
+            }
+        }
+        print(f"Returning data for patient {id}: {data}")
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error processing request for patient {id}: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/clinician/<id>')
 def clinician_interface(id):
-    data = asyncio.run(modules['user_interface'].get_clinician_interface(id))
-    return jsonify(data)
+    print(f"Received request for clinician {id}")
+    try:
+        data = asyncio.run(modules['user_interface'].get_clinician_interface(id))
+        print(f"Returning data for clinician {id}: {data}")
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error processing request for clinician {id}: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/admin/<id>')
 def admin_interface(id):
-    data = asyncio.run(modules['user_interface'].get_admin_interface(id))
-    return jsonify(data)
+    print(f"Received request for admin {id}")
+    try:
+        data = asyncio.run(modules['user_interface'].get_admin_interface(id))
+        print(f"Returning data for admin {id}: {data}")
+        return jsonify(data)
+    except Exception as e:
+        print(f"Error processing request for admin {id}: {str(e)}")
+        return jsonify({"error": str(e)}), 500
 
 @app.route('/api/symptom_tracking', methods=['POST'])
 def track_symptom():
@@ -124,81 +162,60 @@ def get_performance_metrics():
     result = asyncio.run(modules['performance_metrics_module'].generate_performance_report())
     return jsonify(result)
 
-async def demonstrate_modules(modules):
-    print("\nDemonstrating Symptom Tracking:")
-    symptom_data = {
-        'patient_id': '12345',
-        'symptom': 'Feeling sad',
-        'severity': 8,
-        'notes': 'Patient has been feeling sad for several weeks.'
-    }
-    await modules['symptom_tracking_module'].log_symptom('12345', symptom_data)
+async def run_interactive_menu():
+    while True:
+        print("\n--- Mental Health Clinic AI System ---")
+        print("1. Patient Interface")
+        print("2. Clinician Interface")
+        print("3. Administrator Interface")
+        print("4. Exit")
+        
+        choice = input("Select an interface (1-4): ")
+        
+        if choice == '1':
+            patient_id = input("Enter patient ID: ")
+            data = await modules['user_interface'].get_patient_interface(patient_id)
+            print(f"Patient Interface Data: {data}")
+        elif choice == '2':
+            clinician_id = input("Enter clinician ID: ")
+            data = await modules['user_interface'].get_clinician_interface(clinician_id)
+            print(f"Clinician Interface Data: {data}")
+        elif choice == '3':
+            admin_id = input("Enter admin ID: ")
+            data = await modules['user_interface'].get_admin_interface(admin_id)
+            print(f"Admin Interface Data: {data}")
+        elif choice == '4':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
-    print("\nDemonstrating Treatment Plan Handling:")
-    treatment_plan_data = {
-        'patient_id': '12345',
-        'plan': 'Start CBT and schedule weekly sessions.'
-    }
-    await modules['treatment_plan_module'].generate_treatment_plan(treatment_plan_data)
-
-    print("\nDemonstrating Appointment Scheduling:")
-    appointment_data = {
-        'patient_id': '12345',
-        'date': '2023-07-14',
-        'time': '10:00'
-    }
-    await modules['scheduler_module'].schedule_appointment(appointment_data)
-
-    print("\nDemonstrating Progress Monitoring:")
-    progress_data = {
-        'patient_id': '12345',
-        'progress_notes': 'Patient shows improvement after 3 sessions.'
-    }
-    await modules['progress_monitoring_module'].update_progress(progress_data)
-
-    print("\nDemonstrating HIPAA Compliance Check:")
-    await event_bus.publish('hipaa_compliance_check', {})
-
-    print("\nDemonstrating EHR Integration:")
-    ehr_request_data = {
-        'patient_id': '12345',
-        'request_type': 'retrieve'
-    }
-    await event_bus.publish('ehr_request', ehr_request_data)
-
-    print("\nDemonstrating NLP Module:")
-    nlp_data = {
-        'text': 'I have been feeling very anxious and cannot sleep.'
-    }
-    nlp_result = modules['nlp_module'].process_text(nlp_data)
-    print(f"NLP Result: {nlp_result}")
-
-    print("\nDemonstrating ML Module:")
-    ml_data = {
-        'features': [5.1, 3.5, 1.4, 0.2]
-    }
-    ml_result = await modules['ml_module'].predict(ml_data)
-    print(f"ML Result: {ml_result}")
-
-    print("\nDemonstrating Secure Database:")
-    patient_data = {
-        'name': 'John Doe',
-        'age': 30,
-        'diagnosis': 'Anxiety disorder',
-        'treatment': 'CBT'
-    }
-    modules['secure_database'].insert_patient('12345', patient_data)
-    print("Patient data inserted.")
-    retrieved_data = modules['secure_database'].get_patient('12345')
-    print(f"Retrieved patient data: {retrieved_data}")
-
-    print("\nDemonstrating API Integration:")
-    api_integration_status = modules['api_integration'].get_integration_status()
-    print(f"API Integration Status: {api_integration_status}")
+        # Simulate some processing time
+        await asyncio.sleep(1)
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "demo":
-        asyncio.run(demonstrate_modules(modules))
-    else:
+    print(f"Python executable: {sys.executable}")
+    print(f"Python version: {sys.version}")
+    print(f"Current working directory: {os.getcwd()}")
+    print(f"Python path: {sys.path}")
+
+    try:
+        import cryptography
+        print(f"Cryptography version: {cryptography.__version__}")
+        print(f"Cryptography location: {cryptography.__file__}")
+    except ImportError:
+        print("Failed to import cryptography")
+        print("Install cryptography using 'pip install cryptography'")
+
+    print("1. Start Flask server")
+    print("2. Run interactive menu")
+    choice = input("Enter your choice (1 or 2): ")
+
+    if choice == '1':
         print("Starting Flask server...")
-        app.run(debug=True)
+        app.run(debug=True, host='0.0.0.0', port=8000)
+    elif choice == '2':
+        print("Starting interactive menu...")
+        asyncio.run(run_interactive_menu())
+    else:
+        print("Invalid choice. Exiting...")
