@@ -1,0 +1,15 @@
+{
+  "treatment_plan": {
+    "primary_treatment": "Comprehensive psychological evaluation",
+    "additional_treatments": [
+      "Supportive counseling",
+      "Stress management techniques"
+    ],
+    "lifestyle_recommendations": [
+      "Regular exercise",
+      "Healthy diet",
+      "Adequate sleep"
+    ],
+    "follow_up": "Schedule follow-up in 2 weeks"
+  }
+}
